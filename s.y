@@ -39,7 +39,7 @@ char* make_label() {
     Data* info;
 }
 
-/* Added DOUBLE and WHILE here */
+/*  DOUBLE and WHILE here */
 %token <text> ID NUM_INT NUM_FLOAT
 %token INT FLOAT DOUBLE IF ELSE FOR WHILE
 %type <info> expression assignment condition
@@ -196,6 +196,10 @@ expression:
     NUM_INT { $$ = malloc(sizeof(Data)); $$->addr = strdup($1); }
     | NUM_FLOAT { $$ = malloc(sizeof(Data)); $$->addr = strdup($1); } /* Added Float support here */
     | ID { $$ = malloc(sizeof(Data)); $$->addr = strdup($1); }
+
+    | '(' expression ')' { 
+        $$ = $2; /* Just pass the inner value up */
+    }
     | expression '+' expression { 
         $$ = malloc(sizeof(Data)); $$->addr = make_temp();
         fprintf(tacOut, "%s = %s + %s\n", $$->addr, $1->addr, $3->addr);
