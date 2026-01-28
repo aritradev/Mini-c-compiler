@@ -1,4 +1,4 @@
-![Repo Views](https://komarev.com/ghpvc/?username=aritradev-Ai-Image-Generator&label=Repo+Views&color=DE1B89)
+![Repo Views](https://komarev.com/ghpvc/?username=aritradev-Mini-c-compiler&label=Repo+Views&color=DE1B89)
 
 # Simple C-Like Compiler
 
