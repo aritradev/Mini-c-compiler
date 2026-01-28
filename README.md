@@ -1,3 +1,5 @@
+![Repo Views](https://komarev.com/ghpvc/?username=aritradev-Ai-Image-Generator&label=Repo+Views&color=DE1B89)
+
 # Simple C-Like Compiler
 
 A basic compiler built using **Flex** (Lexical Analyzer) and **Bison** (Parser). It parses a C-like subset language and generates **Three Address Code (TAC)** and **x86-style Assembly (ASM)** code.
